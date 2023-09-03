@@ -69,15 +69,17 @@ export default {
 
 <style scoped>
 .container {
+  margin-top: 30vh;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-direction: column;
+  height: 70vh;
+  width: 100vw;
+  align-items: center;
 }
 .name {
   font-weight: 500;
   content: attr(data-text);
-  top: 0;
-  left: 0;
   text-shadow: 4px 3px 0 #8f3985;
 }
 .mono {
