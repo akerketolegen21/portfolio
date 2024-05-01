@@ -1,7 +1,9 @@
 <template>
-  <Intro />
+<div id="app">
   <Menu />
+  <Intro />
   <Work />
+  </div>
 </template>
 <script>
 import Intro from './components/Intro.vue'

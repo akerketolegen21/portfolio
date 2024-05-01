@@ -1,26 +1,26 @@
 <template>
   <div class="container">
   <div class="big-text">
-   <label class="mono">~% </label>Hi, <br> <label class="mono">~% </label> I'm
+   <label class="inter">~%  I'm </label>
       <label class="name">Akerke Tolegen</label>
   </div>
   <div class="position">
-    <label class="mono" >~% </label> {{ position }}
+    <label class="inter" >~% </label> {{ position }}
     <span class="blinking-cursor">|</span>
     <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+    
   </div>
+  <a href="https://read.cv/akerkeoh" target="_blank">🕊️ Click here to see my detailed resume</a>
 </div>
-<AnimatedDivider />
 </template>
 
 
 <script>
-import AnimatedDivider from './AnimatedDivider.vue';
 export default {
   name: 'IntroComponent',
   props: {},
   components: {
-    AnimatedDivider
+
   },
   data() {
     return {
@@ -74,25 +74,31 @@ export default {
 
 <style scoped>
 .container {
-  margin-top: 30vh;
+  margin-top: 10vh;
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: 30vh;
   width: 90vw;
   align-items: center;
+}
+a {
+  font-weight: 200;
+  font-size: large;
+  margin: 3rem;
 }
 .name {
   font-weight: 500;
   content: attr(data-text);
-  text-shadow: 4px 3px 0 #8f3985;
+  text-shadow: 4px 3px 0 hsla(217, 96%, 47%, 0.707);
 }
-.mono {
-  font-family: monospace;
+.inter {
+  font-family: Inter;
+  font-weight: 500;
 }
   @media screen and (max-width: 767px) {
     .big-text {
       font-size: 30px;
-      font-family: 'Futura';
+      font-family: 'Inter';
     }
   }
 
@@ -109,7 +115,6 @@ export default {
   }
   .blinking-cursor {
   font-size: 1rem;
-  color: #efd9ce;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
